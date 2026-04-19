@@ -13,6 +13,7 @@ This document is licensed under the MIT license
 
 | Date | Author | Description |
 |------|--------|-------------|
+| 2026-04-19 | Bob Lail | Made the root command an instance of [Command Object](#command-object) |
 | 2026-03-24 | Bob Lail | Add default value for `arity` to [Argument Object](#argument-object) |
 | 2025-07-15 | Patrik Svensson | Added `interactive` to root command and commands |
 | 2025-07-16 | Patrik Svensson | Added [Metadata Object](#metadata-object) |
@@ -102,15 +103,9 @@ This is the root object of the OpenCLI Description.
 | Field Name | Type | Default Value | Description |
 |------------|:----:|---------------|-------------|
 | opencli | `string` | - | **REQUIRED** The OpenCLI version number |
+| command | [Command Object](#command-object) | - | **REQUIRED** The root command |
 | info | [CliInfo Object](#cliinfo-object) | - | **REQUIRED** Information about the CLI |
 | conventions | [Conventions Object](#conventions-object) | - | The conventions used by the CLI |
-| arguments | [[Argument Object](#argument-object)] | - | Root command arguments |
-| options | [[Option Object](#option-object)] | - | Root command options |
-| commands | [[Command Object](#command-object)] | - | Root command sub commands |
-| exitCodes | [[ExitCode Object](#exitcode-object)] | - | Root command exit codes |
-| examples | [`string`] | - | Examples of how to use the CLI |
-| interactive | `bool` | `false` | Indicates whether or not the command requires interactive input |
-| metadata | [[Metadata Object](#metadata-object)] | - | Custom metadata |
 
 #### CliInfo Object
 

@@ -9,32 +9,14 @@ model OpenCLI {
   @doc("The OpenCLI version number")
   opencli: string;
 
+  @doc("The root command")
+  command: Command;
+
   @doc("Information about the CLI")
   info: CliInfo;
 
   @doc("The conventions used by the CLI")
   conventions?: Conventions;
-
-  @doc("Root command arguments")
-  arguments?: Argument[];
-
-  @doc("Root command options")
-  options?: Option[];
-
-  @doc("Root command sub commands")
-  commands?: Command[];
-
-  @doc("Root command exit codes")
-  exitCodes?: ExitCode[];
-
-  @doc("Examples of how to use the CLI")
-  examples?: string[];
-
-  @doc("Indicates whether or not the command requires interactive input")
-  interactive?: boolean = false;
-
-  @doc("Custom metadata")
-  metadata?: Metadata[];
 }
 
 model CliInfo {
